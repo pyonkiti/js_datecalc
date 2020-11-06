@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>経過日付カウント</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
+        <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
+        <link rel="stylesheet" href="./style.css">
+
+    </head>
+    <body>
+        <div class="container text-center text-white" id="app">
+            <!-- タイトル行 -->
+            <div class="row my-3">
+                <div class="col-sm-15 mx-auto">
+                    <div data-splitting><h1>経過日付は何日？</h1></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastday">未来の日付</label>
+                <input class = "form-control col-sm-6 mx-auto" 
+                        type = "date"
+                        id = "lastday"
+                        onChange = "calc();"/>
+
+                <label for="today">今日の日付</label>
+                <input class = "form-control col-sm-6 mx-auto" 
+                        type = "date"
+                        id = "today"
+                        onChange = "calc();"/>
+            </div>
+
+            <div class="form-group">
+                <label for="days">経過日数</label>
+                <input class = "form-control col-sm-6 mx-auto" 
+                        type = "text" 
+                        readonly id = "days"/>
+            </div>
+        
+            <div data-splitting>
+                <label for="days">未来日付を今日の日付を変更すると、経過日数を計算します。</label>
+            </div>
+    
+            <br>
+        </div>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js'></script>
+        <script src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+        <script  src="./script.js"></script>
+    </body>
+</html>
